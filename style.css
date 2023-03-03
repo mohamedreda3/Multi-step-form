@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root {
+    --bg: rgba(137, 43, 226, 0.429);
+    --common-color-1: #1f1f38;
+    --active-transition: 0.4s ease-in-out;
+    --common-color-2: #45a4da;
+    --common-color-3: #292a63;
+    --glassmorphism-color: #45a3da50;
+    --text-color-1: rgb(255 255 255 / 43%);
+    --text-color-2: #98c6ef;
+    --text-color-3: rgb(128 128 128 / 76%);
+    --common-color-4: #695ee5;
+    --common-color-5: #2b305e;
+    --common-color-6: #f95849;
+    --common-color-7: #272c55;
+    --common-color-8: #00bd8d;
+    --common-color-9: #f5c855;
+    --common-color-10: #0b0d22;
+    --text-color-4: rgb(171 160 160);
+    --text-color-5: rgba(255, 255, 255, 0.679);
+    --common-border-1: 0.1px solid transparent;
+    --common-border-2: 2px solid transparent;
+    --common-border-3: 1px solid transparent;
+
+    /* 
+       #f4f4f4
+       #616fa9
+       #7a7c7c
+       rgba(255, 255, 255, 0.732)
+       rgba(255, 255, 255, 0.679)
+    */
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+body {
+    background: #eef5ff;
+}
+
+a,
+span {
+    display: inline-block;
+}
+
+.container_card {
+    width: min(800px, 100%);
+    height: 70vh;
+    margin: 10vh auto;
+    box-shadow: 1px 1px 10px -3px rgba(128, 128, 128, 0.327), 1px 1px 10px -3px rgba(128, 128, 128, 0.256) inset;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    background: white;
+    /* overflow: hidden; */
+}
+
+
+.steps {
+    width: min(250px, 100%);
+    height: 100%;
+    background: url(./bg-sidebar-desktop.svg) center no-repeat;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.step {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 8px;
+    color: white;
+}
+
+.step #number {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1px solid;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.step-desc span:nth-child(1) {
+    color: #ffffff7d;
+}
+
+.step-desc {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.step.active #number {
+    background-color: #bee1ff;
+    color: black;
+}
+
+form {
+    padding: 30px;
+}
+
+form h2,
+form p {
+    width: fit-content;
+}
+
+form h2 {
+    font-size: 24px;
+    color: #000a3b;
+    margin-bottom: 0;
+}
+
+form p {
+    color: #9e9e9ef5;
+    font-size: 15px;
+}
+
+form label,
+form input {
+    color: #000a3b;
+}
+
+.input_field input {
+    padding: 12px;
+    border-radius: 5px;
+    outline: none;
+    border: 0.1px solid;
+    font-weight: 600;
+}
+
+.input_field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0;
+    gap: 7px;
+}
+
+form button {
+    width: fit-content;
+    background: #000a3b;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 7px;
+    font-size: 17px;
+    text-align: center;
+    left: 65%;
+    margin: 11px 0;
+    cursor: pointer;
+}
+
+.forms {
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+    transition: var(--active-transition);
+    margin: 20px 0;
+}
+
+.container_card .return {
+    width: 50px;
+    height: 50px;
+}
+
+.container_card .backWord {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border: 0.1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--active-transition);
+    z-index: 99;
+}
+
+
+.container_card .backWord svg {
+    width: 35px;
+    height: 100%;
+}
+
+.container_card .backWord:hover {
+    background-color: #45a4da;
+    color: white;
+    border-color: transparent;
+}
+
+.grid-form {
+    overflow: hidden;
+    height: 100%;
+}
+
+
+@media(width<700px) {
+    .steps .step {
+        width: fit-content;
+    }
+
+    .steps {
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        z-index: 9;
+        background: url(./bg-sidebar-mobile.svg) center no-repeat;
+        background-size: cover;
+        min-height: 22vh;
+    }
+
+    .step-desc {
+        display: none;
+    }
+
+    .container_card {
+        /* width: 100%; */
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        height: 100vh;
+        overflow: visible;
+    }
+
+    .forms {
+        display: grid;
+        /* gap: 20px; */
+        width: 100%;
+    }
+
+    .container_card .backWord {
+        left: -50%;
+        translate: 50%;
+    }
+
+    form button {
+        left: 0;
+    }
+
+    form {
+        padding: 15px;
+    }
+}

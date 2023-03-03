@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icon-arcade.svg" type="image/x-icon">
+    <title>Multi-step form</title>
+</head>
+
+<body>
+    <div class="container_card">
+        <div class="steps">
+            <div class="step" data-step="1">
+                <span id="number">1</span>
+                <div class="step-desc">
+                    <span>STEP 1</span>
+                    <span>Your Info</span>
+                </div>
+            </div>
+            <div class="step" data-step="2">
+                <span id="number">2</span>
+                <div class="step-desc">
+                    <span>STEP 2</span>
+                    <span>SELECT PLAN</span>
+                </div>
+            </div>
+            <div class="step" data-step="3">
+                <span id="number">3</span>
+                <div class="step-desc">
+                    <span>STEP 3</span>
+                    <span>ADD-ONS</span>
+                </div>
+            </div>
+            <div class="step" data-step="4">
+                <span id="number">4</span>
+                <div class="step-desc">
+                    <span>STEP 4</span>
+                    <span>SUMMARY</span>
+                </div>
+            </div>
+        </div>
+        <div class="backWord">
+            <span class="iconify" data-icon="tabler:arrow-bar-to-left">
+        </div>
+        </span>
+        <div class="grid-form">
+            <div class="forms">
+                <form action="" data-step="1" id="personalInfo">
+                    <h2>Personal Info</h2>
+                    <p>Please Provide Your Name, email address, phone number.</p>
+                    <div class="inputs_fiels">
+                        <div class="input_field">
+                            <label for="">Name</label>
+                            <input type="text" name="userName" placeholder="e.x. Mohammed Reda" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="">Email Address</label>
+                            <input type="email" name="email" placeholder="e.x. mmoh33650@gmail.com" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="">Phone Number</label>
+                            <input type="number" name="phone" placeholder="e.x. 01212745939" pattern="[^a-z]" required>
+                        </div>
+                    </div>
+                    <button>Next Step</button>
+                </form>
+                <form action="" data-step="2" id="plan">
+                    <h2>Personal Info</h2>
+                    <p>Please Provide Your Name, email address, phone number.</p>
+                    <div class="inputs_fiels">
+                        <div class="input_field">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="e.x. Mohammed Reda" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="">Email Address</label>
+                            <input type="email" placeholder="e.x. mmoh33650@gmail.com" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="">Phone Number</label>
+                            <input type="number" placeholder="e.x. 01212745939" pattern="[^a-z]" required>
+                        </div>
+                    </div>
+                    <button>Next Step</button>
+                </form>
+                <form action="" data-step="3" id="addOns">
+                    <h2>Personal Info</h2>
+                    <p>Please Provide Your Name, email address, phone number.</p>
+                    <div class="inputs_fiels">
+                        <div class="input_field">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="e.x. Mohammed Reda" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="">Email Address</label>
+                            <input type="email" placeholder="e.x. mmoh33650@gmail.com" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="">Phone Number</label>
+                            <input type="number" placeholder="e.x. 01212745939" pattern="[^a-z]" required>
+                        </div>
+                    </div>
+                    <button>Next Step</button>
+                </form>
+                <form action="" data-step="4" id="summary">
+                    <h2>Personal Info</h2>
+                    <p>Please Provide Your Name, email address, phone number.</p>
+                    <div class="inputs_fiels">
+                        <div class="input_field">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="e.x. Mohammed Reda" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="">Email Address</label>
+                            <input type="email" placeholder="e.x. mmoh33650@gmail.com" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="">Phone Number</label>
+                            <input type="number" placeholder="e.x. 01212745939" pattern="[^a-z]" required>
+                        </div>
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
